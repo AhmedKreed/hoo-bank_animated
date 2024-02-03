@@ -183,7 +183,7 @@
     @apply ml-auto sm:pl-4 pl-3;
   }
   .padding-Y {
-    @apply sm:py-16 py-6;
+    @apply py-16;
   }
 }
 .feat_hover:hover {

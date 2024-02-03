@@ -27,7 +27,7 @@ export default function RootLayout({
         <main className="bg-primary w-full overflow-hidden relative text-white">
           <Nav />
           <div className="absolute left-[-65px] top-[200px] white__gradient rounded-full w-[195px] h-[324px]" />
-          <div className="absolute left-[-65px] lg:top-[1500px] md:top-[2700px] top-[2900px] white__gradient rounded-full w-[195px] h-[324px]" />
+          <div className="absolute left-[-400px] lg:top-[1500px] md:top-[2700px] top-[2900px] white__gradient rounded-full w-[405px] h-[470px]" />
           {children}
         </main>
       </body>

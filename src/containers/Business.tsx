@@ -2,9 +2,9 @@ import { Button } from "@/components";
 import { features } from "@/constants";
 import Image from "next/image";
 const Business = () => (
-  <section className="section padding-Y ">
-    <div className="flex justify-between lg:flex-row flex-col  lg:gap-0 gap-20">
-      <div className="">
+  <section className="section padding-Y " id="features">
+    <div className="flex justify-between lg:flex-row flex-col lg:gap-10 gap-20">
+      <div>
         <h1 className="sm:text-5xl text-4xl font-semibold mb-6 sm:leading-[160%] leading-[130%]">
           You do the business, we’ll handle the money.
         </h1>
