@@ -1,5 +1,5 @@
-import { Hero, Business, Billing, CardDeal, About } from "@/containers";
-import { Stats } from "@/components";
+import { Hero, Business, Billing, CardDeal, About, Footer } from "@/containers";
+import { Brand, CTA, Stats } from "@/components";
 const page = () => (
   <>
     <Hero />
@@ -8,6 +8,9 @@ const page = () => (
     <Billing />
     <CardDeal />
     <About />
+    <Brand />
+    <CTA />
+    <Footer />
   </>
 );
 

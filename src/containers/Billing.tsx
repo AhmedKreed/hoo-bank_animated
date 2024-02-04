@@ -13,7 +13,7 @@ const Billing = () => (
         <h1 className="sm:leading-[160%] leading-[130%] sm:text-5xl text-4xl font-semibold mb-6 max-w-[513px]">
           Easily control your billing & invoicing.
         </h1>
-        <p className="max-w-[470px] leading-[160%] mb-12 text-dimWhite">
+        <p className="max-w-[470px] leading-[160%] mb-12 text-dimWhite tracking-wide">
           Elit enim sed massa etiam. Mauris eu adipiscing ultrices ametodio
           aenean neque. Fusce ipsum orci rhoncus aliporttitor integer platea
           placerat.

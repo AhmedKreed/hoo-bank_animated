@@ -8,7 +8,7 @@ const Business = () => (
         <h1 className="sm:text-5xl text-4xl font-semibold mb-6 sm:leading-[160%] leading-[130%]">
           You do the business, we’ll handle the money.
         </h1>
-        <p className="lg:max-w-[470px] leading-[170%] text-dimWhite mb-12 ">
+        <p className="lg:max-w-[470px] leading-[170%] text-dimWhite mb-12 tracking-wide">
           With the right credit card, you can improve your financial life by
           building credit, earning rewards and saving money. But with hundreds
           of credit cards on the market.
