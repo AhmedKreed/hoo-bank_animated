@@ -147,7 +147,7 @@
   }
 }
 .hero-container {
-  width: calc(100% - 0.75rem);
+  width: calc(100% - 0 75rem);
   min-height: calc(100vh - 82px);
 }
 .line {
