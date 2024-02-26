@@ -1,9 +1,17 @@
+"use client";
 import { footerLinks, socialMedia } from "@/constants";
 import { logo } from "@/assets";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { footerVariants } from "@/utils/motion";
 const Footer = () => (
-  <footer className="section mt-5 pb-8 pt-[72px]">
+  <motion.footer
+    variants={footerVariants}
+    initial="hidden"
+    whileInView="show"
+    className="section mt-5 pb-8 pt-[72px] relative"
+  >
     <div className="flex justify-between flex-wrap gap-5">
       <div className="sm:mb-0 mb-14">
         <Image src={logo} alt={"logo"} width={266} />
@@ -44,7 +52,8 @@ const Footer = () => (
         ))}
       </div>
     </div>
-  </footer>
+    <div className="footer-gradient" />
+  </motion.footer>
 );
 
 export default Footer;

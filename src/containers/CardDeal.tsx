@@ -1,11 +1,18 @@
+"use client";
 import Image from "next/image";
 import { card } from "@/assets";
 import { Button } from "@/components";
+import { motion } from "framer-motion";
+import { fadeIn, slideIn } from "@/utils/motion";
 
 const CardDeal = () => (
   <section className="section padding-Y">
     <div className="flex lg:flex-row flex-col lg:gap-10 justify-center items-center ">
-      <div>
+      <motion.div
+        variants={fadeIn("right", "tween", 0, 0.75)}
+        initial="hidden"
+        whileInView="show"
+      >
         <h1 className="sm:text-5xl text-4xl font-semibold mb-6 sm:leading-[160%] leading-[130%]">
           Find a better card deal in few easy steps.
         </h1>
@@ -14,8 +21,14 @@ const CardDeal = () => (
           aliquet eget mauris tortor.ç Aliquet ultrices ac, ametau.
         </p>
         <Button />
-      </div>
-      <Image src={card} alt={"card"} width={513} />
+      </motion.div>
+      <motion.div
+        variants={slideIn("right", "tween", 0, 0.75)}
+        initial="hidden"
+        whileInView="show"
+      >
+        <Image src={card} alt={"card"} width={513} />
+      </motion.div>
     </div>
   </section>
 );

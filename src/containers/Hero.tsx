@@ -1,12 +1,20 @@
+"use client";
 import { discount, robot } from "@/assets";
 import { GetStarted } from "@/components";
+import { fadeIn, textVariant } from "@/utils/motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 const Hero = () => (
   <section
     id="home"
-    className="hero-container hero-section padding-Y flex lg:flex-row flex-col relative"
+    className="hero-container hero-section padding-Y flex lg:flex-row flex-col relative pt-[146px]"
   >
-    <div className="flex flex-1 flex-col lg:mb-0 mb-16">
+    <motion.div
+      className="flex flex-1 flex-col lg:mb-0 mb-16"
+      variants={fadeIn("right", "tween", 0, 0.5)}
+      initial="hidden"
+      whileInView="show"
+    >
       <div className="flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-3 w-fit">
         <Image src={discount} alt={"discount"} />
         <p className="text-dimWhite ml-3">
@@ -31,8 +39,13 @@ const Hero = () => (
         likely to fit your needs. We examine annual percentage rates, annual
         fees.
       </p>
-    </div>
-    <div className="relative flex justify-center items-center lg:my-0 my-10">
+    </motion.div>
+    <motion.div
+      className="relative flex justify-center items-center lg:my-0 my-10"
+      variants={textVariant(0)}
+      initial="hidden"
+      whileInView="show"
+    >
       <Image
         src={robot}
         alt={"billing"}
@@ -43,7 +56,7 @@ const Hero = () => (
       <div className="absolute z-[1] w-[80%] h-[80%] rounded-full white__gradient bottom-40" />
       <div className="absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 blue__gradient" />
       {/* gradient end */}
-    </div>
+    </motion.div>
     <div className={`sm:hidden flex justify-center items-center`}>
       <GetStarted />
     </div>

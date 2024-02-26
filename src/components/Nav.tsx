@@ -3,12 +3,38 @@ import Image from "next/image";
 import { logo } from "@/assets";
 import { navLinks } from "@/constants";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { close, menu } from "@/assets";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { navVariants } from "@/utils/motion";
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if (window.scrollY > lastScrollY) {
+      setShow(false);
+    } else {
+      setShow(true);
+    }
+    setLastScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, [lastScrollY]);
   return (
-    <nav className="section flex justify-between py-6 items-center">
+    <motion.nav
+      variants={navVariants}
+      animate={show ? "show" : "hidden"}
+      className={`flex justify-between py-6 items-center fixed z-10 left-1/2 -translate-x-1/2 ${
+        lastScrollY < 100 ? " section " : "bg-primary w-full sm:px-16 px-6"
+      }`}
+    >
       <Image src={logo} alt={"Hoo-Bank"} width={124} height={32} />
       <ul className="list-none flex max-sm:hidden sm:gap-10 md:gap-12 lg:gap-14">
         {navLinks.map((link) => (
@@ -41,7 +67,7 @@ const Nav = () => {
           </ul>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
