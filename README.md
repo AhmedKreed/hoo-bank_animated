@@ -20,7 +20,7 @@ To run this project, install it locally using npm:
 #### Cloning
 ```
 git clone https://github.com/sfjgnjhdskgas/hoo-bank_animated.git
-cd hoo-bank
+cd hoo-bank_animated
 ```
 #### Installation
 Install the project dependencies using npm:
