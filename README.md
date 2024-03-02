@@ -6,7 +6,7 @@
 ## 📄 General info
 ### Modern UI/UX Hoo-Bank :
 #### <a href="https://main--hoo-bank-animated.netlify.app/" target="_blank"> Live Site </a>
-![img](https://github.com/sfjgnjhdskgas/hoo-bank/assets/149872862/d9e80869-7303-4733-9e57-6d2eccd8fdc8)
+![img](https://github.com/sfjgnjhdskgas/hoo-bank_animated/assets/149872862/3a96e9c0-32e6-46aa-baef-27d5a076ddde)
 
 
 ## ⚙️ Technologies
